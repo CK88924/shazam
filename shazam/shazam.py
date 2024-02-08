@@ -27,7 +27,7 @@ def recognize_song_async(filename, callback):
     async def async_recognize_song():
         shazam = Shazam()
         out = await shazam.recognize_song(filename)
-        return out['track']['title']
+        return out
 
     def run():
         loop = asyncio.new_event_loop()
